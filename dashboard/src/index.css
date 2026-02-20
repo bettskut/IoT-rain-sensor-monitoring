@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body, #root { width: 100vw; height: 100vh; margin: 0; overflow: hidden; }
+}
+
+/* Animasi Hujan */
+.rain-drop {
+  position: absolute; top: -10%; width: 2px; height: 25px;
+  background: linear-gradient(to bottom, transparent, #fff);
+  animation: fall linear infinite;
+}
+@keyframes fall { to { transform: translateY(110vh); } }
+
+/* Animasi Ombak/Bukit */
+@keyframes waveMove {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-wave-slow { animation: waveMove 20s linear infinite; }
+.animate-wave-fast { animation: waveMove 12s linear infinite; }
+
+/* Awan & Matahari */
+@keyframes cloudMove {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(200vw); }
+}
+.animate-cloud-move-slow { animation: cloudMove 45s linear infinite; }
+
+@keyframes spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+.animate-spin-slow { animation: spin 40s linear infinite; }
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 4s ease-in-out infinite;
+}
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
