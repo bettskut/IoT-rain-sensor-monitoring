@@ -71,7 +71,7 @@ app.get("/data", (req, res) => {
 
 // KONFIGURASI SERVER
 const PORT = 3000;
-const IP_ADDRESS = '10.18.19.62'; // Sesuaikan IP ini jika laptop lo ganti WiFi
+const IP_ADDRESS = '10.18.19.62'; // Sesuaikan IP
 
 app.listen(PORT, IP_ADDRESS, () => {
   console.log("========================================");
