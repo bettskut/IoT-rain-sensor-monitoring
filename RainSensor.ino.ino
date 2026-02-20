@@ -7,23 +7,18 @@
 #define DHTTYPE DHT22
 #define RAIN_PIN 32
 
-// ======================
 // WIFI
-// ======================
 const char* ssid = "oktobert";
 const char* password = "12348765";
 
-// IP PC
+// IP DEVICE
 const char* serverURL = "http://10.18.19.62:3000/sensor";
 
 DHT dht(DHTPIN, DHTTYPE);
 
 int lastRain = 0;
 
-
-// ======================
 // BACA RAIN (SMOOTH)
-// ======================
 int readRain() {
   long total = 0;
   int valid = 0;
@@ -86,16 +81,12 @@ void loop() {
   if (rainValue < 1200) status = "HUJAN DERAS";
   else if (rainValue < 2800) status = "GERIMIS";
 
-  // ======================
   // PRINT SERIAL
-  // ======================
   Serial.printf("T: %.1f | H: %.1f | R: %d | %s\n",
                 temperature, humidity, rainValue, status.c_str());
 
 
-  // ======================
   // KIRIM KE SERVER
-  // ======================
   if (WiFi.status() == WL_CONNECTED) {
 
     HTTPClient http;
