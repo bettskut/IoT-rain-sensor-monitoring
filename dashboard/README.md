@@ -17,12 +17,12 @@ Developed an IoT rain monitoring system using ESP32, Raindrops Detection KIT, an
 ## 📸 Documentation
 
 #### Dashboard Previews
-![Main Dashboard](./screenshots/dashboard1.png)
-![Status](./screenshots/dashboard2.png)
-![Graph](./screenshots/dashboard3.png)
+![Main Dashboard](screenshots/dashboard1.png)
+![Status](screenshots/dashboard2.png)
+![Graph](screenshots/dashboard3.png)
 
 ### Database Management (MongoDB)
-![Database](./screenshots/database.png)
+![Database](screenshots/database.png)
 
 ### Hardware Setup
 *(Photo coming soon)*
